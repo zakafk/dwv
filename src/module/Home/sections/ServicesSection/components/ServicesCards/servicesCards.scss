@@ -8,7 +8,8 @@ $gap: 24px;
   gap: $gap;
   margin-top: 80px;
 
-  @include breakpoint-desktop {
+  @include breakpoint-tablet {
+    margin-top: 32px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -20,6 +21,10 @@ $gap: 24px;
     .services-card:nth-last-child(-n+2) {
       flex: 0 0 calc(50% - $gap / 2);
     }
+  }
+
+  @include breakpoint-desktop {
+    margin-top: 80px;
   }
 
   @include breakpoint-desktop-hd {
