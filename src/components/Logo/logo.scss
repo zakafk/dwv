@@ -1,0 +1,14 @@
+@import '/src/styles/variables';
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &-text {
+    color: var(--color-L100);
+    font-family: var(--ff-julius);
+    font-size: var(--size, 24px);
+    letter-spacing: -0.96px;
+  }
+}

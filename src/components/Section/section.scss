@@ -1,0 +1,20 @@
+@import '/src/styles/variables';
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 32px 8px 24px;
+  writing-mode: horizontal-tb;
+  position: relative;
+
+  @include breakpoint-desktop {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include breakpoint-desktop-hd {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}

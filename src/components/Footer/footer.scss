@@ -1,0 +1,88 @@
+@import '/src/styles/variables';
+
+.section-footer {
+  background-color: var(--color-D100);
+  padding-block: 48px;
+
+  &-container {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 24px;
+
+    @include breakpoint-desktop-hd {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-item {
+      flex: 1;
+
+      &-title {
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &-item a {
+          text-decoration: none;
+          color: #EAECF0;
+          transition: color 150ms;
+
+          &:hover {
+            color: var(--color-G60);
+          }
+        }
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    gap: 20px;
+    margin-top: 48px;
+
+    &-link {
+      transition: opacity 150ms;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: color, opacity 150ms;
+
+      &-link {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        text-decoration: none;
+        color: var(--color-L50);
+      }
+
+      &.extend:hover {
+        .contacts-list-item-link {
+          color: var(--color-G60);
+        }
+
+        .contacts-list-item-img {
+          opacity: .7;
+        }
+      }
+    }
+  }
+}

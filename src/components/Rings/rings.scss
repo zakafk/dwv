@@ -1,0 +1,31 @@
+@import '/src/styles/variables';
+
+$size: 40px;
+
+.rings {
+  --ring-width: 3px;
+  --ring-color: var(--color-D30);
+  position: relative;
+  width: 50px;
+  height: 60px;
+  transform: rotate(var(--rotate, 0));
+
+  &.gold {
+    --ring-color: var(--color-G60);
+  }
+
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    width: $size;
+    height: $size;
+    border: var(--ring-width) solid var(--ring-color);
+    border-radius: 100%;
+  }
+
+  &:after {
+    --ring-width: 1px;
+    top: 19px;
+    left: 10px;
+  }
+}

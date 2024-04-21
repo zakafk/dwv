@@ -1,0 +1,9 @@
+@import '/src/styles/variables';
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;
+  max-width: 1440px;
+  height: 100%;
+}

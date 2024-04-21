@@ -1,0 +1,22 @@
+
+.app-modal {
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 12px;
+  }
+
+  .close-icon {
+    position: absolute;
+    inset: 25px 15px auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
