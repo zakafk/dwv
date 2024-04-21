@@ -12,7 +12,7 @@ export const Header: FC = () => {
   return (
     <header className="header">
       <Logo />
-      {isDesktop ? <Navigation/> : <MobileNavigation isDesktop={isDesktop} />}
+      {isDesktop ? <Navigation/> : <MobileNavigation />}
     </header>
   );
 };
