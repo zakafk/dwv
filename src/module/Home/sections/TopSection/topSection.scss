@@ -12,6 +12,16 @@
     color: var(--color-G60);
     font-size: 48px;
     line-height: 84px;
+
+    @include breakpoint-tablet {
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    @include breakpoint-desktop {
+      font-size: 48px;
+      line-height: 84px;
+    }
   }
 
   &-subtitle {
