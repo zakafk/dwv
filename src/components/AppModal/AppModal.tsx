@@ -14,6 +14,7 @@ interface IAppModalProps {
   children: ReactNode;
   className?: string;
   fullscreen?: ModalProps['fullscreen'];
+  animation?: ModalProps['animation'];
 }
 
 export const AppModal: FC<IAppModalProps> = ({
@@ -21,6 +22,7 @@ export const AppModal: FC<IAppModalProps> = ({
   onHide,
   className,
   fullscreen,
+  animation,
   children,
 }) => {
   return (
@@ -32,6 +34,7 @@ export const AppModal: FC<IAppModalProps> = ({
       className={classNames('app-modal', className)}
       centered
       fullscreen={fullscreen}
+      animation={animation}
     >
       <div className="close-icon" onClick={onHide}>
         <Picture src={close_src} />
