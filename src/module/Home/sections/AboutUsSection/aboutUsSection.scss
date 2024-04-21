@@ -1,0 +1,87 @@
+@import '/src/styles/variables';
+
+.about-us {
+  .header {
+    margin-left: 480px;
+
+    @include breakpoint-desktop {
+      margin-left: 552px;
+    }
+
+    @include breakpoint-desktop-hd {
+      margin-left: 480px;
+    }
+  }
+
+  .content {
+    display: flex;
+    gap: 72px;
+    padding-top: 28px;
+    color: var(--color-G70);
+
+    &-title {
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 70px;
+    }
+
+    &-description {
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing: -0.657px;
+      margin: 24px 0;
+    }
+
+    &-rings {
+      position: absolute;
+      right: 171px;
+      bottom: 0;
+    }
+  }
+
+  .main-image-container {
+    border-radius: 12px;
+    padding: 2px;
+    background: linear-gradient(90deg, rgba(241,209,90,1) 0%, rgba(142,118,29,1) 100%);
+  }
+
+  .main-img {
+    position: relative;
+    display: flex;
+    width: 600px;
+    height: 403px;
+    background-image: url("./assets/us.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 2px;
+    z-index: 10;
+
+    @include breakpoint-desktop {
+      width: 493px;
+    }
+
+    @include breakpoint-desktop-hd {
+      width: 600px;
+    }
+
+    img {
+      border-radius: 12px;
+    }
+  }
+
+  .dots-img {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    right: -55px;
+    top: -33px;
+    width: 100%;
+
+    img {
+      width: 284px;
+    }
+  }
+}

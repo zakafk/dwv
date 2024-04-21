@@ -1,0 +1,48 @@
+@import '/src/styles/variables';
+
+$gap: 72px;
+
+.home-section-logo {
+  .logo-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+}
+
+.items-wrap {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: $gap;
+}
+
+.items {
+  flex-shrink: 0;
+  display: flex;
+  gap: $gap;
+  counter-reset: item;
+  justify-content: space-around;
+}
+.item {
+  flex: 0 0 auto;
+  counter-increment: item;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marquee {
+  animation: scroll 100s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+

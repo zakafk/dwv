@@ -1,0 +1,51 @@
+@import '/src/styles/variables';
+
+.home-section-projects {
+  display: flex;
+  flex-direction: column;
+  //gap: 48px;
+
+  .header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+
+    &-rings {
+      position: absolute;
+    }
+
+    &-titles {
+      font-family: var(--ff-graphik);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    &-title {
+      color: var(--color-G60);
+      font-size: 48px;
+    }
+
+    &-subtitle {
+      color: var(--color-G70);
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing: -0.657px;
+    }
+  }
+
+  .footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+
+    &-rings {
+      position: absolute;
+      right: 50px;
+    }
+  }
+}

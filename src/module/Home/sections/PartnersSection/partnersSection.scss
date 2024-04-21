@@ -1,0 +1,100 @@
+@import '/src/styles/variables';
+
+$width: 200px;
+
+.home-section-partners {
+  &-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1;
+    gap: 16px;
+  }
+
+  .tag {
+    font-family: var(--ff-popins);
+    font-weight: 500;
+    display: flex;
+    padding: 6px 16px;
+    gap: 10px;
+    border-radius: 30px;
+    background: var(--color-B40);
+    color: var(--color-B100);
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+  }
+
+  .title {
+    font-weight: bold;
+    color: var(--color-D100);
+    font-size: 48px;
+    line-height: 70px;
+  }
+
+  .description {
+    font-size: 20px;
+    color: var(--color-D30);
+    line-height: 32px;
+    letter-spacing: -0.657px;
+  }
+
+  .img-container {
+    position: relative;
+
+    .main {
+      border-radius: 12px;
+      height: 400px;
+      width: 594px;
+      border: 2px solid var(--color-B20);
+      background-image: url("./assets/partners.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: -40px center;
+
+      @include breakpoint-desktop {
+        width: 513px;
+      }
+
+      @include breakpoint-desktop-hd {
+        height: 400px;
+        width: 594px;
+      }
+    }
+
+    .secondary {
+      position: absolute;
+
+      @include breakpoint-desktop {
+        inset: auto auto -45px -60px;
+        width: 180px;
+        height: 160px;
+      }
+
+      @include breakpoint-desktop-hd {
+        width: $width;
+        height: 185px;
+        inset: 50% auto auto calc(($width / 2) * -1);
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .dots {
+    margin: 8px 0 0 220px;
+    width: 284px;
+    position: relative;
+    bottom: -40px;
+
+    @include breakpoint-desktop-hd {
+      position: unset;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@import '/src/styles/variables';
+
+.services-card {
+  position: relative;
+  padding: 32px 26px;
+  background-image: url("/src/module/Home/sections/ServicesSection/assets/card_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #1C1862;
+  border-radius: 8px;
+  height: 220px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity 150ms;
+  text-align: center;
+
+  &:hover {
+    opacity: .9;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: -23px;
+    bottom: 59px;
+    height: 2px;
+    width: 163px;
+    transform: rotate(-45deg);
+    background-color: #2b2391;
+  }
+
+  &-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    background-color: rgba(237, 197, 49, 0.30);
+    border-radius: 100%;
+  }
+
+  &-title {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 28px;
+    color: #EDC531;
+  }
+
+  &-modal {
+    .modal-content {
+      max-width: 746px;
+      overflow: hidden;
+      background-image: url("../../../assets/card_full_bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      padding: 55px 55px 180px 55px;
+    }
+
+    .dots {
+      position: relative;
+      left: -175px;
+      width: auto;
+      height: 96px;
+    }
+
+    .services-card-logo {
+      position: relative;
+      top: -25px;
+      align-self: center;
+      flex-shrink: 0;
+    }
+
+    .titles {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      &-title {
+       font-weight: bold;
+        font-size: 32px;
+        line-height: 36px;
+        color: var(--color-G60);
+      }
+
+      &-description {
+        color: #FAEEC1;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.657px;
+      }
+    }
+  }
+}
+

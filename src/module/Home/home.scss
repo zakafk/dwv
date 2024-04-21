@@ -1,0 +1,52 @@
+@import '/src/styles/variables';
+
+.home-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &-top {
+    height: 100vh;
+    background-image: url('/src/assets/header_background.png'), url('/src/assets/header.png');
+
+    @include breakpoint-desktop {
+      min-height: 700px;
+    }
+  }
+
+  &-services {
+    background-image: url('/src/assets/service_section_bg.png');
+    padding-block: 48px;
+    justify-content: flex-start;
+
+    @include breakpoint-desktop-hd {
+      padding-block: 48px 87px;
+    }
+  }
+
+  &-about-us {
+    background-image: url('/src/assets/about_us_bg.png');
+    padding-block: 21px 60px;
+  }
+
+  &-partners {
+    overflow: hidden;
+    position: relative;
+    background-image: url('/src/assets/partners_bg.png');
+    padding-block: 48px 24px;
+
+    @include breakpoint-desktop-hd {
+      padding-block: 48px 32px;
+    }
+  }
+
+  &-projects {
+    background-image: url('/src/assets/projects_bg.png');
+    padding-block: 60px;
+  }
+
+  &-logo {
+    background-color: var(--color-D30);
+    padding-block: 48px;
+  }
+}

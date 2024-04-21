@@ -1,0 +1,29 @@
+@import '/src/styles/variables';
+
+$gap: 24px;
+
+.services-cards-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: $gap;
+  margin-top: 80px;
+
+  @include breakpoint-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .services-card {
+      flex: 0 0 calc(34% - $gap);
+    }
+
+    .services-card:nth-last-child(-n+2) {
+      flex: 0 0 calc(50% - $gap / 2);
+    }
+  }
+
+  @include breakpoint-desktop-hd {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
