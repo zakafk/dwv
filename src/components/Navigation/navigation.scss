@@ -97,5 +97,15 @@
 .nav-modal {
   .modal-content {
     background-image: url("/src/assets/burger_bg.png");
+    display: flex;
+    align-items: center;
+  }
+
+  .nav {
+    &-list {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
