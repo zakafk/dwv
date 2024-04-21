@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "julius";
+  src: url('/src/assets/fonts/JuliusSansOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: "graphik";
+  src: url('/src/assets/fonts/GraphikRegular.otf');
+}
+
+@font-face {
+  font-family: "graphik";
+  src: url('/src/assets/fonts/GraphikBold.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "graphik";
+  src: url('/src/assets/fonts/GraphikSemibold.otf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url('/src/assets/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url('/src/assets/fonts/Poppins-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url('/src/assets/fonts/Poppins-SemiBold.ttf');
+  font-weight: 500;
+}
+
+// BREAKPOINTS
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-desktop-hd: 1200px;
+$breakpoint-desktop-large-screen: 1440px;
+
+@mixin breakpoint-mobile {
+  @media screen and (max-width: $breakpoint-tablet - 1px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tablet {
+  @media screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin breakpoint-desktop {
+  @media screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin breakpoint-desktop-hd {
+  @media screen and (min-width: $breakpoint-desktop-hd) {
+    @content;
+  }
+}
+
+@mixin breakpoint-to($bp) {
+  @media screen and (max-width: $bp - 1px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between($bp-from, $bp-to) {
+  @media screen and (min-width: $bp-from) and (max-width: $bp-to - 1px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-from($bp) {
+  @media screen and (min-width: $bp) {
+    @content;
+  }
+}
+
