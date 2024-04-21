@@ -1,0 +1,113 @@
+@import '/src/styles/variables';
+@import 'bootstrap/scss/bootstrap';
+
+// default reset
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  background: rgb(32, 32, 50);
+  background: linear-gradient(
+    90deg,
+    rgba(32, 32, 50, 1) 0%,
+    rgba(33, 34, 53, 1) 11%,
+    rgba(58, 72, 90, 1) 50%,
+    rgba(33, 34, 53, 1) 95%,
+    rgba(32, 32, 50, 1) 100%
+  );
+  color: var(--color-L100);
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button {
+  outline: none;
+  border: none;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  flex: 1 0 auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+:root {
+  --ff-graphik: "graphik", sans-serif;
+  --ff-julius: "julius", sans-serif;
+  --ff-popins: "poppins", sans-serif;
+
+  font-family: var(--ff-graphik);
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --color-L100: #FFF;
+  --color-L60: #E9ECEF;
+  --color-L50: #EAECF0;
+  --color-L40: #FFFFFFB3;
+  --color-L30: #ADB5BD;
+  --color-D100: #19191B;
+  --color-D60: #495057;
+  --color-D30: #6C757D;
+  --color-B100: #1C1862;
+  --color-B80: #473BF0;
+  --color-B60: #6C62F3;
+  --color-B40: #473bf033;
+  --color-B20: #C8C4FA;
+  --color-G100: #5F4F14;
+  --color-G80: #8E761D;
+  --color-G70: #FFE169;
+  --color-G60: #EDC531;
+  --color-G30: #FAEEC1;
+}
