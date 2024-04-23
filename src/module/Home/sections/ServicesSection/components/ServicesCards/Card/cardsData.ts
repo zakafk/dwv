@@ -3,66 +3,66 @@ import { v4 as getUuid } from 'uuid';
 export const cardsData: Record<string, any>[] = [
   {
     id: getUuid(),
-    title: 'Digital transformation 1',
+    title: 'Digital Transformation',
     modalProps: {
-      title: 'Sustainable Innovation 1',
-      description: "Whether it's websites, portals, applications, or AI technologies, we tailor every project to meet your business needs We help organize and transform your processes, ensuring they are not only efficient but also minimize environmental impact. Our digital solutions are designed with sustainability at their core, reducing carbon footprints and promoting green practices.",
+      title: 'Digital Transformation',
+      description: 'Whether it\'s websites, portals, applications, or AI technologies, we tailor every project to meet your business needs We help organize and transform your processes, ensuring they are not only efficient but also minimize environmental impact. Our digital solutions are designed with sustainability at their core, reducing carbon footprints and promoting green practices.',
     },
   },
   {
     id: getUuid(),
-    title: 'Digital transformation 2',
+    title: 'Sustainable Innovation',
     modalProps: {
-      title: 'Sustainable Innovation 2',
-      description: "Whether it's websites, portals, applications, or AI technologies, we tailor every project to meet your business needs We help organize and transform your processes, ensuring they are not only efficient but also minimize environmental impact. Our digital solutions are designed with sustainability at their core, reducing carbon footprints and promoting green practices.",
+      title: 'Sustainable Innovation',
+      description: 'Our innovative digital production incorporates eco-friendly technologies and methodologies, aligning with your business objectives and environmental responsibilities.',
     },
   },
   {
       id: getUuid(),
-      title: 'Digital transformation 3',
+      title: 'Digital Technology Analysis',
       modalProps: {
-        title: 'Sustainable Innovation 3',
-        description: "Whether it's websites, portals, applications, or AI technologies, we tailor every project to meet your business needs We help organize and transform your processes, ensuring they are not only efficient but also minimize environmental impact. Our digital solutions are designed with sustainability at their core, reducing carbon footprints and promoting green practices.",
+        title: 'Digital Technology Analysis',
+        description: 'By examining your current digital assets, we identify opportunities for enhancement, ensuring they serve your future needs more effectively.',
       },
     },
   {
       id: getUuid(),
-      title: 'Digital transformation 4',
+      title: 'AI Integration',
       modalProps: {
-        title: 'Sustainable Innovation 4',
-        description: "Whether it's websites, portals, applications, or AI technologies, we tailor every project to meet your business needs We help organize and transform your processes, ensuring they are not only efficient but also minimize environmental impact. Our digital solutions are designed with sustainability at their core, reducing carbon footprints and promoting green practices.",
+        title: 'AI Integration',
+        description: 'We specialize in integrating AI technologies into your existing digital platforms, elevating their performance and intelligence.',
       },
     },
   {
       id: getUuid(),
-      title: 'Digital transformation 5',
+      title: 'Consultation Services',
       modalProps: {
-        title: 'Sustainable Innovation 5',
-        description: "Whether it's websites, portals, applications, or AI technologies, we tailor every project to meet your business needs We help organize and transform your processes, ensuring they are not only efficient but also minimize environmental impact. Our digital solutions are designed with sustainability at their core, reducing carbon footprints and promoting green practices.",
+        title: 'Consultation Services',
+        description: 'Our experts provide insightful advice on optimizing your digital platforms to meet both your business and customer expectations.',
       },
     },
   {
       id: getUuid(),
-      title: 'Digital transformation 6',
+      title: 'Comprehensive IT Consultancy',
       modalProps: {
-        title: 'Sustainable Innovation 6',
-        description: "Whether it's websites, portals, applications, or AI technologies, we tailor every project to meet your business needs We help organize and transform your processes, ensuring they are not only efficient but also minimize environmental impact. Our digital solutions are designed with sustainability at their core, reducing carbon footprints and promoting green practices.",
+        title: 'Comprehensive IT Consultancy',
+        description: "From envisioning future IT solutions to navigating current technological landscapes, we offer a full spectrum of consultancy services.",
       },
     },
   {
     id: getUuid(),
-    title: 'Digital transformation 7',
+    title: 'Software Development and Enhancement',
     modalProps: {
-      title: 'Sustainable Innovation 7',
-      description: "Whether it's websites, portals, applications, or AI technologies, we tailor every project to meet your business needs We help organize and transform your processes, ensuring they are not only efficient but also minimize environmental impact. Our digital solutions are designed with sustainability at their core, reducing carbon footprints and promoting green practices.",
+      title: 'Software Development and Enhancement',
+      description: 'We focus on building, creating, designing, and improving your software\'s functionality to streamline your daily operations.',
     },
   },
   {
     id: getUuid(),
-    title: 'Digital transformation 8',
+    title: 'Education and Improvement',
     modalProps: {
-      title: 'Sustainable Innovation 8',
-      description: "Whether it's websites, portals, applications, or AI technologies, we tailor every project to meet your business needs We help organize and transform your processes, ensuring they are not only efficient but also minimize environmental impact. Our digital solutions are designed with sustainability at their core, reducing carbon footprints and promoting green practices.",
+      title: 'Education and Improvement',
+      description: 'We offer training and consulting on adopting sustainable digital practices, empowering you to leverage technology in a way that benefits both your business and the environment',
     },
   },
 ];
