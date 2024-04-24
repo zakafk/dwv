@@ -14,7 +14,21 @@ const settings = {
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
-  className: "app-carousel"
+  className: "app-carousel",
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+  ],
 };
 
 export const AppCarousel: FC = () => {

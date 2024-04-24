@@ -60,5 +60,13 @@
   &-projects {
     background-image: url('/src/assets/projects_bg.png');
     padding-block: 60px;
+
+    @include breakpoint-tablet {
+      padding-block: 48px;
+    }
+
+    @include breakpoint-desktop {
+      padding-block: 60px;
+    }
   }
 }

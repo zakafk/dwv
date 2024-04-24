@@ -3,13 +3,16 @@
 .home-section-projects {
   display: flex;
   flex-direction: column;
-  //gap: 48px;
 
   .header {
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
+
+    @include breakpoint-desktop {
+      margin-bottom: 48px;
+    }
 
     &-rings {
       position: absolute;
@@ -26,7 +29,17 @@
 
     &-title {
       color: var(--color-G60);
-      font-size: 48px;
+      font-weight: 600;
+
+      @include breakpoint-tablet {
+        font-size: 32px;
+        line-height: 36px;
+      }
+
+      @include breakpoint-desktop {
+        font-size: 48px;
+        line-height: normal;
+      }
     }
 
     &-subtitle {
