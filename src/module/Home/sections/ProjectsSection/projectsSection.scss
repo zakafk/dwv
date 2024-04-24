@@ -5,17 +5,25 @@
   flex-direction: column;
 
   .header {
-    position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
+
+    @include breakpoint-tablet {
+      margin-bottom: 32px;
+    }
 
     @include breakpoint-desktop {
+      position: relative;
       margin-bottom: 48px;
     }
 
     &-rings {
       position: absolute;
+
+      @include breakpoint-mobile {
+        top: 0;
+      }
     }
 
     &-titles {
@@ -30,11 +38,8 @@
     &-title {
       color: var(--color-G60);
       font-weight: 600;
-
-      @include breakpoint-tablet {
-        font-size: 32px;
-        line-height: 36px;
-      }
+      font-size: 32px;
+      line-height: 36px;
 
       @include breakpoint-desktop {
         font-size: 48px;
@@ -44,9 +49,14 @@
 
     &-subtitle {
       color: var(--color-G70);
-      font-size: 20px;
-      line-height: 32px;
+      font-size: 16px;
+      line-height: 24px;
       letter-spacing: -0.657px;
+
+      @include breakpoint-tablet {
+        font-size: 20px;
+        line-height: 32px;
+      }
     }
   }
 

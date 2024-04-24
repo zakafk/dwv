@@ -8,7 +8,8 @@ $size: 40px;
   position: relative;
   width: 50px;
   height: 60px;
-  transform: rotate(var(--rotate, 0));
+  rotate: var(--rotate, 0);
+  scale: var(--scale, 1);
 
   &.gold {
     --ring-color: var(--color-G60);

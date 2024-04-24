@@ -51,10 +51,6 @@
       right: 20px;
       bottom: -40px;
 
-      @include breakpoint-mobile {
-        transform: scale(0.5);
-      }
-
       @include breakpoint-tablet {
         right: 48px;
         bottom: -3px;

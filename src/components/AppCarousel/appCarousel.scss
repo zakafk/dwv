@@ -5,8 +5,12 @@ $gap: 24px;
 
 .app-carousel {
   position: relative;
-  padding-top: 55px;
+  padding-top: 45px;
   overflow: hidden;
+
+  @include breakpoint-tablet {
+    padding-top: 55px;
+  }
 
   .slick {
     &-list {
@@ -25,12 +29,17 @@ $gap: 24px;
 
     &-arrow {
       inset: 16px 0 auto auto;
-      width: 20px;
-      height: 20px;
+      width: 15px;
+      height: 15px;
       padding: 0 10px;
       transition: opacity 150ms;
       box-sizing: content-box;
       right: 16px;
+
+      @include breakpoint-tablet {
+        width: 20px;
+        height: 20px;
+      }
 
       &:not(.slick-disabled):hover {
         opacity: .6;
@@ -73,7 +82,7 @@ $gap: 24px;
 
     &-slide {
       background-color: rgba(255, 225, 105, 0.10);
-      padding: 24px;
+      padding: 8px;
       border-radius: 14px;
 
       @include breakpoint-tablet {
