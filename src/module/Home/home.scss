@@ -48,13 +48,17 @@
     }
   }
 
+  &-logo {
+    background-color: var(--color-D30);
+    padding-block: 24px;
+
+    @include breakpoint-desktop {
+      padding-block: 48px;
+    }
+  }
+
   &-projects {
     background-image: url('/src/assets/projects_bg.png');
     padding-block: 60px;
-  }
-
-  &-logo {
-    background-color: var(--color-D30);
-    padding-block: 48px;
   }
 }

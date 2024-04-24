@@ -25,12 +25,21 @@ $gap: 72px;
   counter-reset: item;
   justify-content: space-around;
 }
+
 .item {
   flex: 0 0 auto;
   counter-increment: item;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include breakpoint-tablet {
+    width: 100px;
+  }
+
+  @include breakpoint-desktop {
+    width: auto;
+  }
 }
 
 .marquee {
@@ -41,6 +50,7 @@ $gap: 72px;
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(calc(-100% - 20px));
   }
