@@ -2,8 +2,6 @@
 
 .about-us {
   .header {
-    margin-left: 480px;
-
     @include breakpoint-desktop {
       margin-left: 552px;
     }
@@ -15,13 +13,9 @@
 
   .content {
     display: flex;
-    gap: 72px;
+    flex-direction: column;
+    gap: 48px;
     color: var(--color-G70);
-
-    @include breakpoint-tablet {
-      flex-direction: column;
-      gap: 24px;
-    }
 
     @include breakpoint-desktop {
       flex-direction: row;
@@ -31,13 +25,8 @@
 
     &-title {
       font-weight: bold;
-      font-size: 48px;
-      line-height: 70px;
-
-      @include breakpoint-tablet {
-        font-size: 32px;
-        line-height: 36px;
-      }
+      font-size: 32px;
+      line-height: 36px;
 
       @include breakpoint-desktop {
         font-size: 48px;
@@ -46,16 +35,21 @@
     }
 
     &-description {
-      font-size: 20px;
-      line-height: 32px;
+      font-size: 16px;
+      line-height: 24px;
       letter-spacing: -0.657px;
       margin: 24px 0;
+
+      @include breakpoint-tablet {
+        font-size: 20px;
+        line-height: 32px;
+      }
     }
 
     &-rings {
       position: absolute;
-      right: 171px;
-      bottom: 0;
+      right: 20px;
+      bottom: -40px;
 
       @include breakpoint-tablet {
         right: 48px;
@@ -78,20 +72,19 @@
   .main-img {
     position: relative;
     display: flex;
-    width: 600px;
-    height: 403px;
+    width: 100%;
+    height: 351px;
     background-image: url("./assets/us.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: center;
     border-radius: 12px;
     overflow: hidden;
     padding: 2px;
     z-index: 10;
 
     @include breakpoint-tablet {
-      width: 100%;
-      background-position: center;
+      height: 403px;
     }
 
     @include breakpoint-desktop {
@@ -112,10 +105,11 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    position: absolute;
+    inset: auto 2px -30px auto;
 
     @include breakpoint-tablet {
-      position: absolute;
-      inset: auto 45px -30px auto;
+      right: 45px;
     }
 
     @include breakpoint-desktop {

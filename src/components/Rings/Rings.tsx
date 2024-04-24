@@ -9,8 +9,17 @@ interface IRingsProps {
   type?: TType;
   className?: string;
   rotate?: number;
+  scale?: number;
 }
 
-export const Rings: FC<IRingsProps> = ({ type = 'silver', className, rotate = 0 }) => (
-  <div className={classNames('rings', type, className )} style={{ '--rotate': `${rotate}deg` } as CSSProperties } />
+export const Rings: FC<IRingsProps> = ({
+ type = 'silver',
+ className,
+ rotate = 0,
+ scale = 1,
+}) => (
+  <div
+    className={classNames('rings', type, className )}
+    style={{ '--rotate': `${rotate}deg`, '--scale': `${scale}` } as CSSProperties }
+  />
 );

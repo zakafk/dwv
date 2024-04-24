@@ -21,7 +21,7 @@ export const TopSection: FC<ITopSectionProps> = ({ element }) => (
         to your <span className="bold">STRENGTH</span>
       </h1>
       <h3 className="top-section-subtitle">
-        At Digital World Visions - FZCO, we are a forward-thinking team dedicated <br />
+        <span className="top-section-subtitle-part">At Digital World Visions - FZCO, we are a forward-thinking team dedicated</span>
         to crafting digital solutions that pave the way for your future success.
       </h3>
       <Button text="Contact us" className="top-section-button" />

@@ -2,15 +2,24 @@
 
 .section-footer {
   background-color: var(--color-D100);
-  padding-block: 48px;
+  padding-block: 24px;
+  overflow: unset;
+
+  @include breakpoint-tablet {
+    padding-block: 48px;
+  }
 
   &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     gap: 24px;
 
     @include breakpoint-tablet {
-      display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
     }
 
@@ -26,12 +35,20 @@
 
     &-item {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
 
       @include breakpoint-tablet {
+       display: initial;
+
         &:first-child {
           display: flex;
+          flex-direction: row;
           justify-content: space-between;
-          align-items: center;
+          align-items: flex-start;
           flex: 0 0 100%;
         }
       }
@@ -44,18 +61,34 @@
 
       &-title {
         text-transform: uppercase;
-        margin-bottom: 24px;
+        margin-bottom: 12px;
+        font-size: 18px;
+        font-weight: 500;
+
+        @include breakpoint-tablet {
+          margin-bottom: 24px;
+        }
       }
 
       &-list {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 16px;
+        line-height: 36px;
+        font-weight: 500;
+
+        @include breakpoint-tablet {
+          align-items: flex-start;
+        }
 
         &-item {
           display: flex;
           align-items: center;
-          height: 36px;
+
+          @include breakpoint-tablet {
+            height: 36px;
+          }
 
           a {
             text-decoration: none;
@@ -73,12 +106,14 @@
 
   .social {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
 
     @include breakpoint-desktop {
       margin-top: 48px;
+      justify-content: flex-start;
+      align-items: flex-start;
     }
 
     &-link {
@@ -93,20 +128,39 @@
   .contacts-list {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 16px;
+    text-align: center;
+
+    @include breakpoint-tablet {
+      text-align: left;
+      align-items: flex-start;
+    }
 
     &-item {
       display: flex;
+      flex-direction: column;
       align-items: center;
       gap: 16px;
       transition: color, opacity 150ms;
 
+      @include breakpoint-tablet {
+        flex-direction: row;
+      }
+
       &-link {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
         gap: 16px;
         text-decoration: none;
         color: var(--color-L50);
+        width: 100%;
+
+        @include breakpoint-tablet {
+          flex-direction: row;
+        }
       }
 
       &.extend:hover {

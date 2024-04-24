@@ -3,12 +3,12 @@ import { FC } from 'react';
 import { Section } from '../../../../components/Section';
 import { Picture } from '../../../../components/Picture';
 import { Button } from '../../../../components/Button';
+import { useDevice } from '../../../../hooks/useDevice';
 import dots_blue_src from '../../../../assets/dots_blue.svg';
 
 import fun_fact_src from './assets/fun_fact.png';
 
 import './partnersSection.scss';
-import {useDevice} from "../../../../hooks/useDevice";
 
 export const PartnersSection: FC = () => {
   const { isDesktop } = useDevice();

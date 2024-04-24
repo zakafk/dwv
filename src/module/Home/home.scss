@@ -7,9 +7,14 @@
 
   &-top {
     height: 100vh;
-    min-height: 700px;
-    max-height: 1000px;
+    max-height: 690px;
+    min-height: 590px;
     background-image: url('/src/assets/header_background.png'), url('/src/assets/header.png');
+
+    @include breakpoint-tablet {
+      min-height: 700px;
+      max-height: 873px;
+    }
   }
 
   &-services {
@@ -24,11 +29,7 @@
 
   &-about-us {
     background-image: url('/src/assets/about_us_bg.png');
-    padding-block: 21px 60px;
-
-    @include breakpoint-tablet {
-      padding-block: 48px;
-    }
+    padding-block: 48px;
 
     @include breakpoint-desktop {
       padding-block: 21px 60px;
@@ -39,7 +40,7 @@
     overflow: hidden;
     position: relative;
     background-image: url('/src/assets/partners_bg.png');
-    padding-block: 48px 24px;
+    padding-block: 32px;
 
     @include breakpoint-tablet {
       padding-block: 48px 32px;
@@ -57,11 +58,7 @@
 
   &-projects {
     background-image: url('/src/assets/projects_bg.png');
-    padding-block: 60px;
-
-    @include breakpoint-tablet {
-      padding-block: 48px;
-    }
+    padding-block: 48px;
 
     @include breakpoint-desktop {
       padding-block: 60px;

@@ -36,7 +36,7 @@ export const AboutUsSection: FC = () => {
             ensuring your technologies are not just current, but future-ready.
           </p>
           <Button text="Learn more" />
-          <Rings type="gold" className="content-rings" rotate={isDesktop ? -45 : 0} />
+          <Rings type="gold" className="content-rings" rotate={isDesktop ? -45 : 0} scale={isDesktop ? 1 : 0.5} />
         </div>
       </div>
     </Section>

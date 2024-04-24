@@ -4,4 +4,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &-logo {
+    .logo-text {
+      display: none;
+
+      @include breakpoint-from(452px) {
+        display: block;
+      }
+    }
+  }
 }

@@ -11,7 +11,7 @@ export const Header: FC = () => {
 
   return (
     <header className="header">
-      <Logo />
+      <Logo className="header-logo" />
       {isDesktop ? <Navigation/> : <MobileNavigation />}
     </header>
   );
