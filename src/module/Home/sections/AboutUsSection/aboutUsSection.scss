@@ -16,13 +16,33 @@
   .content {
     display: flex;
     gap: 72px;
-    padding-top: 28px;
     color: var(--color-G70);
+
+    @include breakpoint-tablet {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    @include breakpoint-desktop {
+      flex-direction: row;
+      gap: 72px;
+      padding-top: 28px;
+    }
 
     &-title {
       font-weight: bold;
       font-size: 48px;
       line-height: 70px;
+
+      @include breakpoint-tablet {
+        font-size: 32px;
+        line-height: 36px;
+      }
+
+      @include breakpoint-desktop {
+        font-size: 48px;
+        line-height: 70px;
+      }
     }
 
     &-description {
@@ -36,6 +56,16 @@
       position: absolute;
       right: 171px;
       bottom: 0;
+
+      @include breakpoint-tablet {
+        right: 48px;
+        bottom: -3px;
+      }
+
+      @include breakpoint-desktop {
+        right: 171px;
+        bottom: 0;
+      }
     }
   }
 
@@ -59,7 +89,13 @@
     padding: 2px;
     z-index: 10;
 
+    @include breakpoint-tablet {
+      width: 100%;
+      background-position: center;
+    }
+
     @include breakpoint-desktop {
+      background-position: right center;
       width: 493px;
     }
 
@@ -75,10 +111,17 @@
   .dots-img {
     display: flex;
     justify-content: flex-end;
-    position: relative;
-    right: -55px;
-    top: -33px;
     width: 100%;
+
+    @include breakpoint-tablet {
+      position: absolute;
+      inset: auto 45px -30px auto;
+    }
+
+    @include breakpoint-desktop {
+      position: relative;
+      inset: auto -55px 33px auto;
+    }
 
     img {
       width: 284px;

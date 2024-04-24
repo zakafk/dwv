@@ -5,8 +5,18 @@ $width: 200px;
 .home-section-partners {
   &-row {
     display: flex;
-    align-items: flex-start;
-    gap: 120px;
+
+
+    @include breakpoint-tablet {
+      flex-direction: column-reverse;
+      gap: 80px;
+    }
+
+    @include breakpoint-desktop {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 120px;
+    }
   }
 
   &-container {
@@ -37,6 +47,16 @@ $width: 200px;
     color: var(--color-D100);
     font-size: 48px;
     line-height: 70px;
+
+    @include breakpoint-tablet {
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    @include breakpoint-desktop {
+      font-size: 48px;
+      line-height: 70px;
+    }
   }
 
   .description {
@@ -57,14 +77,18 @@ $width: 200px;
       background-image: url("./assets/partners.jpeg");
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: -40px center;
+
+      @include breakpoint-tablet {
+        width: 100%;
+        background-position: center
+      }
 
       @include breakpoint-desktop {
         width: 513px;
+        background-position: -40px center;
       }
 
       @include breakpoint-desktop-hd {
-        height: 400px;
         width: 594px;
       }
     }
@@ -72,10 +96,14 @@ $width: 200px;
     .secondary {
       position: absolute;
 
-      @include breakpoint-desktop {
-        inset: auto auto -45px -60px;
+      @include breakpoint-tablet {
+        inset: auto auto -50px 30px;
         width: 180px;
         height: 160px;
+      }
+
+      @include breakpoint-desktop {
+        inset: auto auto -45px -60px;
       }
 
       @include breakpoint-desktop-hd {
