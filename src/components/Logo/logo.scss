@@ -10,10 +10,5 @@
     font-family: var(--ff-julius);
     font-size: var(--size, 24px);
     letter-spacing: -0.96px;
-    display: none;
-
-    @include breakpoint-from(425px) {
-      display: block;
-    }
   }
 }

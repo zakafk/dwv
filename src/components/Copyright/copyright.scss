@@ -2,19 +2,34 @@
 
 .section-copyright {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--color-G60);
   color: var(--color-D100);
   padding-block: 24px;
+  overflow: unset;
+  text-align: center;
+  gap: 12px;
+  text-transform: uppercase;
+
+  @include breakpoint-tablet {
+    flex-direction: row;
+    text-align: left;
+  }
 
   .policy {
     display: flex;
-    gap: 32px;
+    flex-direction: column;
+    gap: 12px;
     color: var(--color-D60);
     font-weight: 500;
     font-size: 12px;
     line-height: 12px;
-    text-transform: uppercase;
+
+    @include breakpoint-tablet {
+      flex-direction: row;
+      gap: 32px;
+    }
   }
 }
