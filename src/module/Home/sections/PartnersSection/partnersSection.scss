@@ -5,12 +5,8 @@ $width: 200px;
 .home-section-partners {
   &-row {
     display: flex;
-
-
-    @include breakpoint-tablet {
-      flex-direction: column-reverse;
-      gap: 80px;
-    }
+    flex-direction: column-reverse;
+    gap: 80px;
 
     @include breakpoint-desktop {
       flex-direction: row;
@@ -45,13 +41,8 @@ $width: 200px;
   .title {
     font-weight: bold;
     color: var(--color-D100);
-    font-size: 48px;
-    line-height: 70px;
-
-    @include breakpoint-tablet {
-      font-size: 32px;
-      line-height: 36px;
-    }
+    font-size: 32px;
+    line-height: 36px;
 
     @include breakpoint-desktop {
       font-size: 48px;
@@ -60,10 +51,15 @@ $width: 200px;
   }
 
   .description {
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 24px;
     color: var(--color-D30);
-    line-height: 32px;
     letter-spacing: -0.657px;
+
+    @include breakpoint-tablet {
+      font-size: 20px;
+      line-height: 32px;
+    }
   }
 
   .img-container {
@@ -71,16 +67,16 @@ $width: 200px;
 
     .main {
       border-radius: 12px;
-      height: 400px;
-      width: 594px;
+      height: 311px;
+      width: 100%;
       border: 2px solid var(--color-B20);
       background-image: url("./assets/partners.jpeg");
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: center;
 
       @include breakpoint-tablet {
-        width: 100%;
-        background-position: center
+        height: 400px;
       }
 
       @include breakpoint-desktop {
@@ -95,11 +91,12 @@ $width: 200px;
 
     .secondary {
       position: absolute;
+      inset: auto auto -40px 13px;
+      width: 180px;
+      height: 160px;
 
       @include breakpoint-tablet {
         inset: auto auto -50px 30px;
-        width: 180px;
-        height: 160px;
       }
 
       @include breakpoint-desktop {
