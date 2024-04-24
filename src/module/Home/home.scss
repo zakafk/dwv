@@ -29,11 +29,7 @@
 
   &-about-us {
     background-image: url('/src/assets/about_us_bg.png');
-    padding-block: 21px 60px;
-
-    @include breakpoint-tablet {
-      padding-block: 48px;
-    }
+    padding-block: 48px;
 
     @include breakpoint-desktop {
       padding-block: 21px 60px;
