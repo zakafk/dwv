@@ -3,6 +3,7 @@
 .section-footer {
   background-color: var(--color-D100);
   padding-block: 48px;
+  overflow: unset;
 
   &-container {
     margin: 0;

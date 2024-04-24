@@ -6,12 +6,20 @@
   justify-content: center;
   height: 100%;
   gap: 12px;
-  margin-bottom: 60px;
+  margin-bottom: 115px;
+  text-align: center;
+  align-items: center;
+
+  @include breakpoint-tablet {
+    text-align: left;
+    align-items: flex-start;
+    margin-bottom: 60px;
+  }
 
   &-title {
     color: var(--color-G60);
-    font-size: 48px;
-    line-height: 84px;
+    font-size: 24px;
+    line-height: 40px;
 
     @include breakpoint-tablet {
       font-size: 32px;
@@ -25,10 +33,21 @@
   }
 
   &-subtitle {
-    color: rgba(255, 255, 255, 0.90);
-    font-size: 20px;
-    line-height: 32px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    line-height: 24px;
     letter-spacing: -0.657px;
+
+    @include breakpoint-tablet {
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    &-part {
+      @include breakpoint-tablet {
+        display: block;
+      }
+    }
   }
 
   &-button {

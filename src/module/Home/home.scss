@@ -7,9 +7,14 @@
 
   &-top {
     height: 100vh;
-    min-height: 700px;
-    max-height: 1000px;
+    max-height: 690px;
+    min-height: 590px;
     background-image: url('/src/assets/header_background.png'), url('/src/assets/header.png');
+
+    @include breakpoint-tablet {
+      min-height: 700px;
+      max-height: 1000px;
+    }
   }
 
   &-services {

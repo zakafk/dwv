@@ -4,13 +4,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 24px 32px 8px 24px;
+  padding: 16px;
   writing-mode: horizontal-tb;
   position: relative;
+  overflow: hidden;
 
   @include breakpoint-tablet {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 24px 24px 8px 24px;
   }
 
   @include breakpoint-desktop {
