@@ -7,11 +7,9 @@
 
   &-top {
     height: 100vh;
+    min-height: 700px;
+    max-height: 1000px;
     background-image: url('/src/assets/header_background.png'), url('/src/assets/header.png');
-
-    @include breakpoint-desktop {
-      min-height: 700px;
-    }
   }
 
   &-services {
