@@ -43,7 +43,7 @@
     background-image: url('/src/assets/partners_bg.png');
     padding-block: 48px 24px;
 
-    @include breakpoint-desktop-hd {
+    @include breakpoint-tablet {
       padding-block: 48px 32px;
     }
   }
