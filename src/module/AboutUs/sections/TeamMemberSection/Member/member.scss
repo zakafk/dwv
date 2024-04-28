@@ -1,0 +1,88 @@
+@import '/src/styles/variables';
+
+.member {
+  position: relative;
+  margin: 0 auto;
+
+  @include breakpoint-from(425px) {
+    margin: unset;
+  }
+
+  .label-container {
+    background-color: rgba(25, 25, 27, 0.9);
+    border: 6px solid var(--color-G60);
+    bottom: -77px;
+    position: absolute;
+    border-radius: 8px;
+    width: 100%;
+
+    @include breakpoint-tablet {
+      width: auto;
+      min-width: 522px;
+    }
+
+    &-left {
+      left: 0;
+
+      @include breakpoint-desktop {
+        left: 152px;
+      }
+    }
+
+    &-right {
+      right: 0;
+
+      @include breakpoint-desktop {
+        right: 152px;
+      }
+    }
+  }
+
+  .label {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 16px;
+    border: 2px solid var(--color-G60);
+    margin: -2px;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+
+    @include breakpoint-from(425px) {
+      flex-direction: row;
+      gap: 0;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  .linkedin {
+    width: 80px;
+  }
+
+  .name {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+
+    @include breakpoint-tablet {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+  }
+
+  .role {
+    color: #E9ECEF;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.657px;
+
+    @include breakpoint-tablet {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+}

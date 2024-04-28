@@ -1,0 +1,84 @@
+@import '/src/styles/variables';
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+
+  @include breakpoint-tablet {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  @include breakpoint-desktop {
+    gap: 60px;
+  }
+
+  @include breakpoint-desktop-hd {
+    gap: 120px;
+  }
+
+  &-right {
+    @include breakpoint-tablet {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .main-img {
+    max-width: 304px;
+    flex-shrink: 0;
+
+    @include breakpoint-tablet {
+      width: 304px;
+      max-width: 100%;
+    }
+  }
+
+  .message-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+
+    .message {
+      color: var(--color-G30);
+      font-size: 20px;
+      font-style: italic;
+      line-height: 28px;
+
+      @include breakpoint-desktop {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .img {
+    width: 41px;
+    flex-shrink: 0;
+  }
+
+  .rings {
+    position: absolute;
+    display: flex;
+    top: -70px;
+
+    @include breakpoint-tablet {
+      bottom: -30px;
+      top: auto;
+    }
+
+    &-left {
+      right: 30px;
+    }
+
+    &-right {
+      right: 30px;
+
+      @include breakpoint-tablet {
+        left: 30px;
+      }
+    }
+  }
+}
