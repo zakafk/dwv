@@ -20,7 +20,7 @@ export const Header: FC = () => {
   return (
     <header className={classNames('main-header', `main-header-${headerType}` )}>
       <Section className="main-header-section">
-        <Logo className="mian-header-logo" />
+        <Logo className="main-header-logo" />
         {isDesktop ? <Navigation/> : <MobileNavigation />}
       </Section>
     </header>
