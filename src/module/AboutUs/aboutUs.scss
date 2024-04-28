@@ -26,4 +26,13 @@
       z-index: -1;
     }
   }
+
+  &-team {
+    background-image: url('/src/assets/about_us_bg.png');
+    padding: 48px 24px;
+
+    @include breakpoint-desktop {
+      padding: 80px 120px;
+    }
+  }
 }

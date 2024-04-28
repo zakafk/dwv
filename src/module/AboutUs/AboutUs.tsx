@@ -1,11 +1,12 @@
 import { FC } from 'react';
 
-import { AboutUsManiSection } from './sections';
+import { AboutUsManiSection, TeamSection } from './sections';
 
 import './aboutUs.scss';
 
 export const AboutUs: FC = () => (
   <>
-   <AboutUsManiSection />
+    <AboutUsManiSection />
+    <TeamSection />
   </>
 );
