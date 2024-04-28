@@ -1,4 +1,4 @@
-import { FC, useMemo } from 'react';
+import { FC, useMemo, useCallback } from 'react';
 import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
 
@@ -9,9 +9,17 @@ import language_icon from '../../assets/icons/language_icon.svg';
 
 import './navigation.scss';
 
-export const Navigation: FC = () => {
+interface INavigationPops {
+  callback?: VoidFunction;
+}
+
+export const Navigation: FC<INavigationPops> = ({ callback }) => {
+  const handleClick = useCallback(() => {
+    if (callback) callback();
+  }, []);
+
   const nav = useMemo(() => NAV_MAP.map(({ title, to}) => (
-    <li key={title} className="nav-list-item">
+    <li key={title} className="nav-list-item" onClick={handleClick}>
       <NavLink to={to} className="nav-list-item-link">{title}</NavLink>
     </li>
   )), [NAV_MAP]);
