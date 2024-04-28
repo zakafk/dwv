@@ -18,9 +18,9 @@ export const Header: FC = () => {
   const headerType = HEADER_TYPE_MAP[pathname] || THeaderType.LIGHT;
 
   return (
-    <header className={classNames('header', `header-${headerType}` )}>
-      <Section className="header-section">
-        <Logo className="header-logo" />
+    <header className={classNames('main-header', `main-header-${headerType}` )}>
+      <Section className="main-header-section">
+        <Logo className="mian-header-logo" />
         {isDesktop ? <Navigation/> : <MobileNavigation />}
       </Section>
     </header>

@@ -81,7 +81,6 @@ $width: 200px;
 
       @include breakpoint-desktop {
         width: 513px;
-        background-position: -40px center;
       }
 
       @include breakpoint-desktop-hd {

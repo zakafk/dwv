@@ -4,7 +4,7 @@ import { Section } from '../../../../components/Section';
 import { Picture } from '../../../../components/Picture';
 import { Button } from '../../../../components/Button';
 import { useDevice } from '../../../../hooks/useDevice';
-import dots_blue_src from '../../../../assets/dots_blue.svg';
+import { Dots } from '../../../../components/Dots';
 
 import fun_fact_src from './assets/fun_fact.png';
 
@@ -30,7 +30,7 @@ export const PartnersSection: FC = () => {
           <Picture src={fun_fact_src} className="secondary"/>
         </div>
       </div>
-      {isDesktop && <Picture src={dots_blue_src} className="dots"/>}
+      {isDesktop && <Dots color="blue" className="dots" />}
     </Section>
   );
 };
