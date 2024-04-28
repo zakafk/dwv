@@ -1,10 +1,12 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Section } from '../../../../components/Section';
 import { Rings } from '../../../../components/Rings';
 import { Button } from '../../../../components/Button';
 import { useDevice } from '../../../../hooks/useDevice';
 import { Dots } from '../../../../components/Dots';
+import { PATH_NAMES } from '../../../../constants/navigation';
 
 import './aboutUsSection.scss';
 
@@ -32,7 +34,9 @@ export const AboutUsSection: FC = () => {
             a partnership that grows with your business. Let us help you navigate the complexities of the digital world,
             ensuring your technologies are not just current, but future-ready.
           </p>
-          <Button text="Learn more" />
+          <Link to={PATH_NAMES.ABOUT_US}>
+            <Button text="Learn more" />
+          </Link>
           <Rings type="gold" className="content-rings" rotate={isDesktop ? -45 : 0} scale={!isMobile ? 1 : 0.5} />
         </div>
       </div>
