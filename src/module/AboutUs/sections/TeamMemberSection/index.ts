@@ -1,0 +1,1 @@
+export { TeamMemberSection } from './TeamMemberSection';
