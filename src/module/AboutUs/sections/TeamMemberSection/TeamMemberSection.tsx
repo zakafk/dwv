@@ -21,7 +21,7 @@ interface ITeamMemberSectionPops {
 
 export const TeamMemberSection: FC<ITeamMemberSectionPops> = ({ name, role, src, message, position = 'left' }) => {
   return (
-    <Section className="about-us-section about-us-section-team-member">
+    <Section className={classNames("about-us-section about-us-section-team-member", position)}>
       <div className={classNames('wrapper', `wrapper-${position}`)}>
         <Member
           name={name}
