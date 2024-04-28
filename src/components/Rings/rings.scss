@@ -15,6 +15,10 @@ $size: 40px;
     --ring-color: var(--color-G60);
   }
 
+  &.blue {
+    --ring-color: var(--color-B100);
+  }
+
   &:before, &:after {
     content: "";
     position: absolute;
