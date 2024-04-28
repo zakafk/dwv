@@ -11,7 +11,7 @@ import './main.scss';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter basename="/dwv">
+    <BrowserRouter basename="/dwv/">
       <MainLayout>
         <Header />
         <App />
