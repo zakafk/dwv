@@ -8,5 +8,5 @@ interface IMainLayoutProps {
 }
 
 export const MainLayout: FC<IMainLayoutProps> = ({ children }) => (
-  <Container fluid className="main-container">{children}</Container>
+  <Container fluid className="main-container position-relative">{children}</Container>
 );

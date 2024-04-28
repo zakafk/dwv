@@ -1,6 +1,5 @@
 import { FC, RefObject } from 'react';
 
-import { Header } from '../../../../components/Header';
 import { Button } from '../../../../components/Button';
 import { ScrollDown } from '../../../../components/ScrollDown';
 import { Section } from '../../../../components/Section';
@@ -13,7 +12,6 @@ interface ITopSectionProps {
 
 export const TopSection: FC<ITopSectionProps> = ({ element }) => (
   <Section className="home-section home-section-top">
-    <Header />
     <div className="top-section">
       <h1 className="top-section-title">
         Digital <span className="bold">SOLUTION</span> which <br />
