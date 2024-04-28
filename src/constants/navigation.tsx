@@ -2,6 +2,13 @@ import {ReactNode} from "react";
 
 import { Home, AboutUs } from "../module";
 
+export const PATH_NAMES = {
+  HOME: '/',
+  ABOUT_US: '/about',
+  PARTNERS: '/partners',
+  PROJECTS: '/projects',
+}
+
 type TNavMap = {
   title: string;
   to: string;
@@ -9,8 +16,8 @@ type TNavMap = {
 };
 
 export const NAV_MAP: TNavMap[] = [
-  { title: 'Home', to: '/', element: <Home />},
-  { title: 'About us', to: '/about', element: <AboutUs /> },
-  { title: 'Partners', to: '/partners', element: <div>Partners</div> },
-  { title: 'Our Projects', to: '/projects', element: <div>Our Projects</div> },
+  { title: 'Home', to: PATH_NAMES.HOME, element: <Home />},
+  { title: 'About us', to: PATH_NAMES.ABOUT_US, element: <AboutUs /> },
+  { title: 'Partners', to: PATH_NAMES.PARTNERS, element: <div>Partners</div> },
+  { title: 'Our Projects', to: PATH_NAMES.PROJECTS, element: <div>Our Projects</div> },
 ];
