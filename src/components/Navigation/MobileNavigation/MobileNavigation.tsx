@@ -22,7 +22,7 @@ export const MobileNavigation: FC = () => {
         <div className="nav-burger-line" />
       </div>
       <AppModal show={isOpen} onHide={handleCloseMenu} fullscreen className="nav-modal" animation={false}>
-        <Navigation />
+        <Navigation callback={handleCloseMenu} />
       </AppModal>
     </>
   );
