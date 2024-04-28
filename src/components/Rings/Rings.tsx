@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 import './rings.scss';
 
-type TType = 'gold' | 'silver';
+type TType = 'gold' | 'silver' | 'blue';
 
 interface IRingsProps {
   type?: TType;

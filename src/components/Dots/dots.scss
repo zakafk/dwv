@@ -1,0 +1,32 @@
+@import '/src/styles/variables';
+
+.dots {
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(15, 4px);
+    gap: 16px;
+  }
+
+  &-item {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #007bff;
+
+    &-gray {
+      background-color: var(--color-D30);
+    }
+
+    &-violet {
+      background-color: var(--color-B100);
+    }
+
+    &-blue {
+      background-color: var(--color-B60);
+    }
+
+    &-gold {
+      background-color: var(--color-G60);
+    }
+  }
+}

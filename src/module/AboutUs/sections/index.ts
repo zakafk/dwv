@@ -1,0 +1,1 @@
+export { AboutUsManiSection } from './AboutUsManiSection';

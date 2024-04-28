@@ -12,7 +12,8 @@
   }
 
   &-dark {
-    background-color: #19191B;
+    background-color: var(--color-D100);
+    position: unset;
   }
 
   & &-section {
