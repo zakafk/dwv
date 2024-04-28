@@ -46,6 +46,16 @@
       }
     }
 
+    .dots {
+      position: absolute;
+      right: 30px;
+      bottom: -53px;
+
+      @include breakpoint-desktop {
+        right: -57px;
+      }
+    }
+
     &-rings {
       position: absolute;
       right: 20px;
@@ -57,8 +67,13 @@
       }
 
       @include breakpoint-desktop {
+        right: 70px;
+        bottom: -120px;
+      }
+
+      @include breakpoint-desktop-hd {
         right: 171px;
-        bottom: 0;
+        bottom: -100px;
       }
     }
   }

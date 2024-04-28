@@ -2,15 +2,14 @@ import { FC } from 'react';
 
 import { Section } from '../../../../components/Section';
 import { Rings } from '../../../../components/Rings';
-import { Picture } from '../../../../components/Picture';
 import { Button } from '../../../../components/Button';
 import { useDevice } from '../../../../hooks/useDevice';
-import dots_gold from '../../../../assets/dots_gold.svg';
+import { Dots } from '../../../../components/Dots';
 
 import './aboutUsSection.scss';
 
 export const AboutUsSection: FC = () => {
-  const { isDesktop } = useDevice();
+  const { isDesktop, isMobile } = useDevice();
 
   return (
     <Section className="home-section home-section-about-us about-us">
@@ -24,9 +23,7 @@ export const AboutUsSection: FC = () => {
           <div className="main-image-container">
             <div className="main-img" />
           </div>
-          <div className="dots-img">
-            <Picture src={dots_gold} />
-          </div>
+          <Dots color="gold" className="dots" />
         </div>
         <div className="position-relative">
           <h3 className="content-title">About Us</h3>
@@ -36,7 +33,7 @@ export const AboutUsSection: FC = () => {
             ensuring your technologies are not just current, but future-ready.
           </p>
           <Button text="Learn more" />
-          <Rings type="gold" className="content-rings" rotate={isDesktop ? -45 : 0} scale={isDesktop ? 1 : 0.5} />
+          <Rings type="gold" className="content-rings" rotate={isDesktop ? -45 : 0} scale={!isMobile ? 1 : 0.5} />
         </div>
       </div>
     </Section>

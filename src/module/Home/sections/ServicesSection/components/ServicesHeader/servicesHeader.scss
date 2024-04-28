@@ -1,7 +1,7 @@
 @import '/src/styles/variables';
 
 .services-header {
-  &-img {
+  &-titles {
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
@@ -9,8 +9,6 @@
     position: relative;
 
     @include breakpoint-desktop {
-      background-image: url("/src/module/Home/sections/ServicesSection/assets/dots.png");
-      background-repeat: no-repeat;
       position: unset;
     }
 
@@ -18,6 +16,15 @@
       flex-direction: row;
       justify-content: center;
       height: 96px;
+    }
+
+    .dots {
+      position: absolute;
+      left: 32px;
+
+      @include breakpoint-desktop-hd {
+        left: 60px;
+      }
     }
   }
 
