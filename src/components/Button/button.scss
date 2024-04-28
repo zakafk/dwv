@@ -7,12 +7,12 @@
   background-color: transparent;
   border: 1px solid var(--color-G60);
   border-radius: 4px;
-  transition: background-color 250ms;
+  transition: 250ms;
   color: var(--color-G60);
 
   &:hover {
     background-color: var(--color-G60);
-    color: var(--color-L100);
+    color: var(--color-G100);
   }
 
   &.secondary {
