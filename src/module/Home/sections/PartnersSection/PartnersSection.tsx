@@ -23,7 +23,7 @@ export const PartnersSection: FC = () => {
             Our partners achieve their future goals with our support.
             Scale your business to new heights with our expertise.
           </p>
-          <Button text="Contact us" type="secondary"/>
+          <Button text="Contact us" buttonType="secondary"/>
         </div>
         <div className="img-container">
           <div className="main"/>

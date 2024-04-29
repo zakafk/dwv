@@ -19,22 +19,26 @@ interface ITeamMemberSectionPops {
   position?: TPosition;
 }
 
-export const TeamMemberSection: FC<ITeamMemberSectionPops> = ({ name, role, src, message, position = 'left' }) => {
-  return (
-    <Section className={classNames("about-us-section about-us-section-team-member", position)}>
-      <div className={classNames('wrapper', `wrapper-${position}`)}>
-        <Member
-          name={name}
-          role={role}
-          src={src}
-          position={position}
-        />
-        <div className="message-wrapper">
-          <Picture src={quotes} className="img" />
-          <p className="message">{message}</p>
-          <Rings type="gold" className={classNames('rings', `rings-${position}`)} rotate={-40} />
-        </div>
+export const TeamMemberSection: FC<ITeamMemberSectionPops> = ({
+  name,
+  role,
+  src,
+  message,
+  position = 'left',
+}) => (
+  <Section className={classNames('about-us-section about-us-section-team-member', position)}>
+    <div className={classNames('wrapper', `wrapper-${position}`)}>
+      <Member
+        name={name}
+        role={role}
+        src={src}
+        position={position}
+      />
+      <div className="message-wrapper">
+        <Picture src={quotes} className="img" />
+        <p className="message">{message}</p>
+        <Rings type="gold" className={classNames('rings', `rings-${position}`)} rotate={-40} />
       </div>
-    </Section>
-  );
-};
+    </div>
+  </Section>
+);

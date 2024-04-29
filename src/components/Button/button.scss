@@ -24,4 +24,15 @@
       color: var(--color-L100);
     }
   }
+
+  &.submit {
+    border-color: var(--color-D30);
+    background-color: var(--color-L60);
+    color: var(--color-D60);
+
+    &:hover {
+      background-color: var(--color-B80);
+      color: var(--color-L100);
+    }
+  }
 }

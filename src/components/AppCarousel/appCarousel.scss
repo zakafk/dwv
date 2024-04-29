@@ -110,7 +110,7 @@ $gap: 24px;
       button {
         width: 8px;
         height: 8px;
-        background-color: #BBBBBC;
+        background-color: var(--color-L10);
         border-radius: 50px;
 
         &:before {
@@ -121,7 +121,7 @@ $gap: 24px;
 
     &-active {
       button {
-        background-color: #EDC531;
+        background-color: var(--color-G60);
         width: 20px;
       }
     }

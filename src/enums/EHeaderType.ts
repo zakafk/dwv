@@ -1,4 +1,4 @@
-export enum THeaderType {
+export enum EHeaderType {
   LIGHT = 'light',
   DARK = 'dark',
 }

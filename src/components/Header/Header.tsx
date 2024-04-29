@@ -7,7 +7,7 @@ import { Section } from '../Section';
 import { Navigation, MobileNavigation } from '../Navigation';
 import { useDevice } from '../../hooks/useDevice';
 import { HEADER_TYPE_MAP } from '../../constants/header';
-import { THeaderType } from '../../enums/THeaderType';
+import { EHeaderType } from '../../enums/EHeaderType';
 
 import './header.scss';
 
@@ -15,7 +15,7 @@ export const Header: FC = () => {
   const { pathname } = useLocation();
   const { isDesktop } = useDevice();
 
-  const headerType = HEADER_TYPE_MAP[pathname] || THeaderType.LIGHT;
+  const headerType = HEADER_TYPE_MAP[pathname] || EHeaderType.LIGHT;
 
   return (
     <header className={classNames('main-header', `main-header-${headerType}` )}>

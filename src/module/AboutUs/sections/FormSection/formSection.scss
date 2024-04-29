@@ -1,0 +1,101 @@
+@import '/src/styles/variables';
+
+.about-us-section-form {
+  text-align: center;
+
+  .title {
+    color: var(--color-D100);
+    font-size: 28px;
+    font-weight: 600;
+
+    @include breakpoint-tablet {
+      font-size: 42px;
+    }
+  }
+
+  .description {
+    color: var(--color-D30);
+    font-size: 18px;
+    margin: 24px 0;
+  }
+
+  .rings {
+    position: unset;
+
+    @include breakpoint-tablet {
+      position: absolute;
+    }
+
+    &-top {
+      margin: 0 12px;
+
+      @include breakpoint-mobile {
+        display: flex;
+      }
+
+      @include breakpoint-tablet {
+        margin: 0;
+        top: 55px;
+        left: 70px;
+      }
+
+      @include breakpoint-desktop {
+        left: 155px;
+      }
+    }
+
+    &-bottom {
+      align-self: end;
+
+      @include breakpoint-tablet {
+        margin: 0;
+        bottom: 65px;
+        right: 55px;
+      }
+
+      @include breakpoint-desktop {
+        right: 130px;
+      }
+    }
+  }
+}
+
+.form-wrapper {
+  @include breakpoint-tablet {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  &-inner {
+    display: grid;
+    gap: 12px 40px;
+
+    @include breakpoint-tablet {
+      gap: 27px 40px;
+    }
+
+    @include breakpoint-tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.error {
+      @include breakpoint-tablet {
+        gap: 7px 40px;
+      }
+    }
+  }
+
+  &-btn {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0 12px;
+
+    @include breakpoint-tablet {
+      margin: 32px 0 0;
+    }
+
+    button {
+      width: 200px;
+    }
+  }
+}
