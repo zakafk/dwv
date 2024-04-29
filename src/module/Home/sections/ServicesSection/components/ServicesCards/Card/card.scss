@@ -6,7 +6,7 @@
   background-image: url("/src/module/Home/sections/ServicesSection/assets/card_background.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #252540;
+  background-color: var(--color-D90);
   border-radius: 8px;
   height: 220px;
   overflow: hidden;
@@ -27,7 +27,7 @@
     height: 2px;
     width: 163px;
     transform: rotate(-45deg);
-    background-color: #2b2391;
+    background-color: var(--color-B90);
   }
 
   &-container {
@@ -56,7 +56,7 @@
     font-weight: bold;
     font-size: 22px;
     line-height: 28px;
-    color: #EDC531;
+    color: var(--color-G60)
   }
 
   &-modal {
@@ -75,7 +75,7 @@
       max-width: 746px;
       overflow: hidden;
       background-image: url("../../../assets/card_full_bg.png");
-      background-color: #252540;
+      background-color: var(--color-D90);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -134,7 +134,7 @@
       }
 
       &-description {
-        color: #FAEEC1;
+        color: var(--color-G30);
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.657px;

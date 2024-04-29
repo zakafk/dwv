@@ -3,17 +3,26 @@ import classNames from 'classnames';
 
 import './button.scss';
 
-type TButtonType = 'primary' | 'secondary';
+type TButtonType = 'primary' | 'secondary' | 'submit';
+
+type TType = 'submit' | 'button';
 
 interface ButtonProps {
   text: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   className?: string;
-  type?: TButtonType;
+  buttonType?: TButtonType;
+  type?: TType;
 }
 
-export const Button: FC<ButtonProps> = ({ text, onClick, className, type = 'primary' }) => (
+export const Button: FC<ButtonProps> = ({
+  text,
+  onClick,
+  className,
+  buttonType = 'primary',
+  type = 'button',
+}) => (
   <div className={classNames(className)}>
-    <button type="button" className={classNames('button bold', type)} onClick={onClick}>{text}</button>
+    <button type={type} className={classNames('button bold', buttonType)} onClick={onClick}>{text}</button>
   </div>
 );

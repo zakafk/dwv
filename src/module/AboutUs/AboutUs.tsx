@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-import { AboutUsManiSection, TeamSection, TeamMemberSection } from './sections';
 import george from '../../assets/teamMembers/george-amanatidze.png';
+import { AboutUsManiSection, TeamSection, TeamMemberSection, FormSection } from './sections';
 
 import './aboutUs.scss';
 
@@ -30,5 +30,6 @@ export const AboutUs: FC = () => (
       src={george}
       message="message"
     />
+    <FormSection />
   </>
 );
