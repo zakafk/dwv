@@ -35,4 +35,22 @@
       color: var(--color-L100);
     }
   }
+
+  &.success, &.success:hover {
+    border-color: var(--color-S50);
+    background-color: var(--color-S30);
+    color: var(--color-L100);
+  }
+
+  &.error, &.error:hover {
+    border-color: var(--color-E50);
+    background-color: var(--color-E50);
+    color: var(--color-L100);
+  }
+
+  &:disabled, &:disabled:hover {
+    color: var(--color-L10);
+    border-color: var(--color-L10);
+    background-color: var(--color-L60);
+  }
 }

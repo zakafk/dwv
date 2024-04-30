@@ -1,18 +1,19 @@
 import { FC } from 'react';
 import classNames from 'classnames';
-import { ControllerRenderProps, FieldValues } from 'react-hook-form';
 
 import { EFields } from '../../enums/EFields';
 
 import './inputs.scss';
 
 interface BaseInput {
-  field: ControllerRenderProps<FieldValues, any>;
+  field: any;
   errors: Record<string, any>;
   label: string;
   name: EFields;
   type?: string;
   placeholder?: string;
+  checked?: boolean;
+  rest?: any;
 }
 
 export const BaseInput: FC<BaseInput> = ({
@@ -22,8 +23,10 @@ export const BaseInput: FC<BaseInput> = ({
   name,
   type,
   placeholder= '',
+  checked = false,
 }) => {
   const isCheckbox = type === 'checkbox';
+  const check = isCheckbox ? { checked } : {};
 
   return (
     <div className="inputs">
@@ -35,6 +38,7 @@ export const BaseInput: FC<BaseInput> = ({
           className={classNames('input', {[`input-${type}`]: !!type})}
           placeholder={placeholder || label}
           type={type}
+          {...check}
         />
         {isCheckbox && <label htmlFor={name} className="label label-additional">{label}</label>}
       </div>

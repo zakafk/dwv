@@ -1,6 +1,7 @@
-import { FC, useCallback } from 'react';
+import { FC, useCallback, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import classNames from 'classnames';
+// import axios from 'axios';
 
 import { Section } from '../../../../components/Section';
 import { Button } from '../../../../components/Button';
@@ -12,18 +13,51 @@ import { useDevice } from '../../../../hooks/useDevice';
 import './formSection.scss';
 
 export const FormSection: FC = () => {
+  const [isFetch, setFetch] = useState<boolean>(false);
+  const [isSuccess, setSuccess] = useState<boolean>(false);
+  const [isError, setError] = useState<boolean>(false);
   const { isMobile } = useDevice();
 
   const {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+    reset,
+    watch,
+  } = useForm({
+    defaultValues: {
+      [EFields.NAME]: '',
+      [EFields.COMPANY_NAME]: '',
+      [EFields.EMAIL]: '',
+      [EFields.PHONE]: '',
+      [EFields.WHATSAPP]: false,
+      [EFields.MESSAGE]: '',
+      [EFields.AGREEMENT]: false,
+    },
+  });
 
-  const isError = !!Object.values(errors).length;
+  const [isWhatsApp, isAgreement] = watch([EFields.WHATSAPP, EFields.AGREEMENT]);
 
-  const onSubmit = useCallback((data: any) => {
-    return null;
+  const isValidationError = !!Object.values(errors).length;
+
+  const onSubmit = useCallback(async (data: any) => {
+    setFetch(true);
+
+    try {
+      // await axios.post('http://localhost:3001/api/save-form-data1', data);
+      setSuccess(true);
+      reset();
+    } catch (error) {
+      console.error('error while sending data', error);
+      setError(true);
+    } finally {
+      setFetch(false);
+
+      setTimeout(() => {
+        setSuccess(false);
+        setError(false);
+      }, 1_000);
+    }
   }, []);
 
   return (
@@ -33,25 +67,24 @@ export const FormSection: FC = () => {
       <p className="description">Our team will contact you as quickly as possible</p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-wrapper">
-          <div className={classNames('form-wrapper-inner', { 'error': isError })}>
+          <div className={classNames('form-wrapper-inner', { 'error': isValidationError })}>
             <Controller
               name={EFields.NAME}
               control={control}
-              defaultValue=""
               rules={{ required: 'required' }}
-              render={({ field }) => (
+              render={({ field, ...rest }) => (
                 <BaseInput
                   field={field}
                   errors={errors}
                   label="Full name"
                   name={EFields.NAME}
+                  rest={rest}
                 />
               )}
             />
             <Controller
               name={EFields.COMPANY_NAME}
               control={control}
-              defaultValue=""
               rules={{ required: 'required' }}
               render={({ field }) => (
                 <BaseInput
@@ -65,7 +98,6 @@ export const FormSection: FC = () => {
             <Controller
               name={EFields.EMAIL}
               control={control}
-              defaultValue=""
               rules={{ required: 'required' }}
               render={({ field }) => (
                 <BaseInput
@@ -80,7 +112,6 @@ export const FormSection: FC = () => {
               <Controller
                 name={EFields.PHONE}
                 control={control}
-                defaultValue=""
                 rules={{ required: 'required' }}
                 render={({ field }) => (
                   <BaseInput
@@ -95,7 +126,7 @@ export const FormSection: FC = () => {
               <Controller
                 name={EFields.WHATSAPP}
                 control={control}
-                defaultValue=""
+                defaultValue={false}
                 render={({ field }) => (
                   <BaseInput
                     field={field}
@@ -103,6 +134,7 @@ export const FormSection: FC = () => {
                     name={EFields.WHATSAPP}
                     type="checkbox"
                     label="Text me on a WhatsApp"
+                    checked={isWhatsApp}
                   />
                 )}
               />
@@ -111,7 +143,6 @@ export const FormSection: FC = () => {
           <Controller
             name={EFields.MESSAGE}
             control={control}
-            defaultValue=""
             rules={{ required: 'required' }}
             render={({ field }) => (
               <BaseInput
@@ -126,7 +157,6 @@ export const FormSection: FC = () => {
           <Controller
             name={EFields.AGREEMENT}
             control={control}
-            defaultValue=""
             rules={{ required: 'required' }}
             render={({ field }) => (
               <BaseInput
@@ -135,10 +165,19 @@ export const FormSection: FC = () => {
                 name={EFields.AGREEMENT}
                 type="checkbox"
                 label="I agree to the Terms of use and Privacy Policy*"
+                checked={isAgreement}
               />
             )}
           />
-          <Button text="Send message" type="submit" buttonType="submit" className="form-wrapper-btn" />
+          <Button
+            text="Send message"
+            type="submit"
+            buttonType="submit"
+            className="form-wrapper-btn"
+            disabled={isFetch}
+            isSuccess={isSuccess}
+            isError={isError}
+          />
         </div>
       </form>
       <Rings className="rings rings-bottom" rotate={-90} scale={isMobile ? 0.5 : 1} />
