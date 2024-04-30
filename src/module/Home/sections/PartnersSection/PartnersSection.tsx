@@ -17,7 +17,6 @@ export const PartnersSection: FC = () => {
     <Section className="home-section home-section-partners">
       <div className="home-section-partners-row">
         <div className="home-section-partners-container">
-          <div className="tag">Why Choose us</div>
           <h3 className="title">Choose Us to Grow Your Business</h3>
           <p className="description">
             Our partners achieve their future goals with our support.
@@ -27,7 +26,7 @@ export const PartnersSection: FC = () => {
         </div>
         <div className="img-container">
           <div className="main"/>
-          <Picture src={fun_fact_src} className="secondary"/>
+          <Picture src={fun_fact_src} className="secondary d-none"/>
         </div>
       </div>
       {isDesktop && <Dots color="blue" className="dots" />}
