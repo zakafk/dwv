@@ -132,6 +132,7 @@
     align-items: center;
     gap: 16px;
     text-align: center;
+    flex-shrink: 0;
 
     @include breakpoint-tablet {
       text-align: left;
@@ -144,9 +145,14 @@
       align-items: center;
       gap: 16px;
       transition: color, opacity 150ms;
+      line-height: 20px;
 
       @include breakpoint-tablet {
         flex-direction: row;
+      }
+
+      &-img-container {
+        flex-shrink: 0;
       }
 
       &-link {

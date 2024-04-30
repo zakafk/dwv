@@ -4,7 +4,6 @@ import email_src from '../../../assets/icons/email_icon.svg';
 import whatsapp_src from '../../../assets/icons/whatsapp_icon.svg';
 import phone_src from '../../../assets/icons/phone_icon.svg';
 import address_marker_src from '../../../assets/icons/address_marker_icon.svg';
-import { Picture } from '../../Picture';
 import { useDevice } from '../../../hooks/useDevice';
 import { ContactUsItem } from './ContactUsItem';
 
@@ -21,7 +20,7 @@ export const ContactUsSection: FC = () => {
       <ContactUsItem src={email_src} target="_blank" href="mailto:digitalworldvisions@gmail.com" title="digitalworldvisions@gmail.com" />
       <ContactUsItem src={whatsapp_src} target="_blank" href={href} title={PHONE} />
       <ContactUsItem src={phone_src} target="_blank" href={`tel:${PHONE}`} title={PHONE} />
-      <ContactUsItem src={address_marker_src} title="IFZA Business park, Silicon Oasis, Dubai" />
+      <ContactUsItem src={address_marker_src} title="Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, United Arab Emirates" />
     </ul>
   );
 };

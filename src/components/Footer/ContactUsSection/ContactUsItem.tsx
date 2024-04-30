@@ -1,8 +1,8 @@
 import { FC } from 'react';
+import classNames from 'classnames';
 
 import { TTarget } from '../../../types/TTarget';
 import { Picture } from '../../Picture';
-import classNames from "classnames";
 
 interface IContactUsItemProps {
   src: string;
@@ -16,12 +16,16 @@ export const ContactUsItem: FC<IContactUsItemProps> = ({ href, target = 'self', 
     <li className={classNames('contacts-list-item', { 'extend': !!href })}>
       {!!href ? (
         <a className="contacts-list-item-link" href={href} target={target}>
-          <Picture src={src} className="contacts-list-item-img"/>
+          <div className="contacts-list-item-img-container">
+            <Picture src={src} className="contacts-list-item-img"/>
+          </div>
           <span>{title}</span>
         </a>
       ) : (
         <>
-          <Picture src={src} className="contacts-list-item-img"/>
+          <div className="contacts-list-item-img-container">
+            <Picture src={src} className="contacts-list-item-img"/>
+          </div>
           <span>{title}</span>
         </>
       )}
