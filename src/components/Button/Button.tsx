@@ -13,6 +13,9 @@ interface ButtonProps {
   className?: string;
   buttonType?: TButtonType;
   type?: TType;
+  disabled?: boolean;
+  isSuccess?: boolean;
+  isError?: boolean;
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -21,8 +24,20 @@ export const Button: FC<ButtonProps> = ({
   className,
   buttonType = 'primary',
   type = 'button',
+  disabled = false,
+  isSuccess = false,
+  isError = false,
 }) => (
   <div className={classNames(className)}>
-    <button type={type} className={classNames('button bold', buttonType)} onClick={onClick}>{text}</button>
+    <button
+      disabled={disabled}
+      type={type}
+      className={classNames('button bold', buttonType, { 'success': isSuccess, 'error': isError } )}
+      onClick={onClick}
+    >
+      {isSuccess && 'Success'}
+      {isError && 'Try again'}
+      {!isError && !isSuccess && text}
+    </button>
   </div>
 );

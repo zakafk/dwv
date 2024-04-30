@@ -61,6 +61,8 @@
 }
 
 .form-wrapper {
+  position: relative;
+
   @include breakpoint-tablet {
     margin: 0 auto;
     max-width: 600px;
