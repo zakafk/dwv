@@ -7,6 +7,7 @@ import { Button } from '../../../../components/Button';
 import { useDevice } from '../../../../hooks/useDevice';
 import { Dots } from '../../../../components/Dots';
 import { PATH_NAMES } from '../../../../constants/navigation';
+import { Title, Subtitle } from '../../../../components/Typography';
 
 import './aboutUsSection.scss';
 
@@ -28,12 +29,12 @@ export const AboutUsSection: FC = () => {
           <Dots color="gold" className="dots" />
         </div>
         <div className="position-relative">
-          <h3 className="content-title">About Us</h3>
-          <p className="content-description">
+          <Title color="gold">About Us</Title>
+          <Subtitle color="gold" className="content-description">
             At  Digital World Visions - FZCO, we're not just about providing services; we're about offering
             a partnership that grows with your business. Let us help you navigate the complexities of the digital world,
             ensuring your technologies are not just current, but future-ready.
-          </p>
+          </Subtitle>
           <Link to={PATH_NAMES.ABOUT_US}>
             <Button text="Learn more" />
           </Link>

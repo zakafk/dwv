@@ -24,30 +24,6 @@ $width: 200px;
     gap: 16px;
   }
 
-  .title {
-    font-weight: bold;
-    color: var(--color-D100);
-    font-size: 32px;
-    line-height: 36px;
-
-    @include breakpoint-desktop {
-      font-size: 48px;
-      line-height: 70px;
-    }
-  }
-
-  .description {
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--color-D30);
-    letter-spacing: -0.657px;
-
-    @include breakpoint-tablet {
-      font-size: 20px;
-      line-height: 32px;
-    }
-  }
-
   .img-container {
     position: relative;
 
