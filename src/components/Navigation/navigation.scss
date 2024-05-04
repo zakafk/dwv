@@ -102,7 +102,11 @@
     background-color: #252540;
 
     .close-icon {
-      inset: 30px 22px auto auto;
+      inset: 37px 22px auto auto;
+
+      @include breakpoint-tablet {
+        right: 30px;
+      }
     }
   }
 
