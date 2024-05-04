@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 import { Section } from '../../../../components/Section';
 import { Button } from '../../../../components/Button';
-import { BaseInput } from "../../../../components/Inputs";
+import { BaseInput } from '../../../../components/Inputs';
 import { EFields } from '../../../../enums/EFields';
 import { Rings } from '../../../../components/Rings';
 import { useDevice } from '../../../../hooks/useDevice';

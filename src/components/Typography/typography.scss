@@ -1,0 +1,80 @@
+@import '/src/styles/variables';
+
+.typography {
+  flex-grow: 1;
+
+  &-left {
+    text-align: left;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-black {
+    color: var(--color-D100);
+  }
+
+  &-gray {
+    color: var(--color-D60);
+
+    &-light {
+      color: var(--color-D30);
+    }
+  }
+
+  &-gold {
+    color: var(--color-G70);
+
+    &-deep {
+      color: var(--color-G60);
+    }
+
+    &-light {
+      color: var(--color-G30);
+    }
+  }
+
+  &-white {
+    color: var(--color-L100);
+  }
+
+  &-violet {
+    color: var(--color-B80);
+
+    &-deep {
+      color: var(--color-B100);
+    }
+
+    &-light {
+      color: var(--color-B60);
+    }
+  }
+
+
+  &-title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 36px;
+
+    @include breakpoint-desktop {
+      font-size: 48px;
+      line-height: 70px;
+    }
+  }
+
+  &-subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.657px;
+
+    @include breakpoint-desktop {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+}

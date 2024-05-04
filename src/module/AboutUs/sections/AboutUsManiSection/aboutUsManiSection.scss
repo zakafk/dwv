@@ -5,27 +5,7 @@
   color: var(--color-B100);
   gap: 24px;
 
-  .title {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 36px;
-
-    @include breakpoint-desktop {
-      font-size: 48px;
-      line-height: 70px;
-    }
-  }
-
   .description {
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.657px;
-
-    @include breakpoint-tablet {
-      font-size: 20px;
-      line-height: 32px;
-    }
-
     @include breakpoint-desktop {
       padding: 0 120px;
     }

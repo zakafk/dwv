@@ -15,21 +15,4 @@
       display: flex;
     }
   }
-
-  .title {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 36px;
-
-    @include breakpoint-desktop {
-      font-size: 48px;
-      line-height: 70px;
-    }
-  }
-
-  .description {
-    font-size: 20px;
-    line-height: 32px;
-    letter-spacing: -0.657px;
-  }
 }

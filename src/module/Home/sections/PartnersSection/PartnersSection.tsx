@@ -5,6 +5,7 @@ import { Picture } from '../../../../components/Picture';
 import { Button } from '../../../../components/Button';
 import { useDevice } from '../../../../hooks/useDevice';
 import { Dots } from '../../../../components/Dots';
+import { Subtitle, Title } from '../../../../components/Typography';
 
 import fun_fact_src from './assets/fun_fact.png';
 
@@ -17,11 +18,11 @@ export const PartnersSection: FC = () => {
     <Section className="home-section home-section-partners">
       <div className="home-section-partners-row">
         <div className="home-section-partners-container">
-          <h3 className="title">Choose Us to Grow Your Business</h3>
-          <p className="description">
+          <Title color="black">Choose Us to Grow Your Business</Title>
+          <Subtitle color="gray-light">
             Our partners achieve their future goals with our support.
             Scale your business to new heights with our expertise.
-          </p>
+          </Subtitle>
           <Button text="Contact us" buttonType="secondary"/>
         </div>
         <div className="img-container">
