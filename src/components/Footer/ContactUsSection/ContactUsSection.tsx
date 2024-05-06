@@ -20,7 +20,7 @@ export const ContactUsSection: FC = () => {
       <ContactUsItem src={email_src} target="_blank" href="mailto:digitalworldvisions@gmail.com" title="digitalworldvisions@gmail.com" />
       <ContactUsItem src={whatsapp_src} target="_blank" href={href} title={PHONE} />
       <ContactUsItem src={phone_src} target="_blank" href={`tel:${PHONE}`} title={PHONE} />
-      <ContactUsItem src={address_marker_src} title="Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, United Arab Emirates" />
+      <ContactUsItem src={address_marker_src} title="Building A1, Digital Park, Silicon Oasis, Dubai, UAE" />
     </ul>
   );
 };

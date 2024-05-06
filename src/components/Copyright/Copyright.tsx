@@ -8,7 +8,7 @@ export const Copyright: FC = () => (
   <Section className="section-copyright">
     <span >Copyright © 2024 </span>
     <div className="policy">
-      <span>Term of use</span>
+      <span>Terms of use</span>
       <span>Privacy Policy</span>
       <span>Cookie Policy</span>
     </div>

@@ -1,8 +1,10 @@
 import { FC, RefObject } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { Button } from '../../../../components/Button';
 import { ScrollDown } from '../../../../components/ScrollDown';
 import { Section } from '../../../../components/Section';
+import { PATH_NAMES } from '../../../../constants/navigation';
 
 import './topSection.scss';
 
@@ -22,7 +24,9 @@ export const TopSection: FC<ITopSectionProps> = ({ element }) => (
         <span className="top-section-subtitle-part">At Digital World Visions - FZCO, we are a forward-thinking team dedicated</span>{' '}
         to crafting digital solutions that pave the way for your future success.
       </h3>
-      <Button text="Contact us" className="top-section-button" />
+      <NavLink to={`${PATH_NAMES.ABOUT_US}#form`}>
+        <Button text="Contact us" className="top-section-button" />
+      </NavLink>
     </div>
     <ScrollDown element={element} />
   </Section>
