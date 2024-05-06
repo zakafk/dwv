@@ -29,7 +29,7 @@ export const Navigation: FC<INavigationPops> = ({ callback }) => {
       <nav className={classNames("nav")}>
         <ul className="nav-list">
           {nav}
-          <li className="nav-list-item">
+          <li className="nav-list-item d-none">
             <div className="languages">
               <span>en</span>
               <Picture src={language_icon} />

@@ -5,8 +5,8 @@ import {
   ServicesSection,
   AboutUsSection,
   PartnersSection,
-  LogoSection,
-  ProjectsSection,
+  // LogoSection,
+  // ProjectsSection,
 } from './sections';
 
 import './home.scss';
@@ -22,8 +22,8 @@ export const Home: FC = () => {
       </div>
       <AboutUsSection />
       <PartnersSection />
-      <LogoSection />
-      <ProjectsSection />
+      {/*<LogoSection />*/}
+      {/*<ProjectsSection />*/}
     </>
   );
 };

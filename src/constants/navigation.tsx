@@ -18,6 +18,6 @@ type TNavMap = {
 export const NAV_MAP: TNavMap[] = [
   { title: 'Home', to: PATH_NAMES.HOME, element: <Home />},
   { title: 'About us', to: PATH_NAMES.ABOUT_US, element: <AboutUs /> },
-  { title: 'Partners', to: PATH_NAMES.PARTNERS, element: <div>Partners</div> },
-  { title: 'Our Projects', to: PATH_NAMES.PROJECTS, element: <div>Our Projects</div> },
+  // { title: 'Partners', to: PATH_NAMES.PARTNERS, element: <div>Partners</div> },
+  // { title: 'Our Projects', to: PATH_NAMES.PROJECTS, element: <div>Our Projects</div> },
 ];

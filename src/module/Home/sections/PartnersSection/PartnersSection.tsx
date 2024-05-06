@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { Section } from '../../../../components/Section';
 import { Picture } from '../../../../components/Picture';
@@ -6,6 +7,7 @@ import { Button } from '../../../../components/Button';
 import { useDevice } from '../../../../hooks/useDevice';
 import { Dots } from '../../../../components/Dots';
 import { Subtitle, Title } from '../../../../components/Typography';
+import { PATH_NAMES } from '../../../../constants/navigation';
 
 import fun_fact_src from './assets/fun_fact.png';
 
@@ -23,7 +25,9 @@ export const PartnersSection: FC = () => {
             Our partners achieve their future goals with our support.
             Scale your business to new heights with our expertise.
           </Subtitle>
-          <Button text="Contact us" buttonType="secondary"/>
+          <NavLink to={`${PATH_NAMES.ABOUT_US}#form`}>
+            <Button text="Contact us" buttonType="secondary"/>
+          </NavLink>
         </div>
         <div className="img-container">
           <div className="main"/>

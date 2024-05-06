@@ -1,6 +1,7 @@
-import { FC, useCallback, useState } from 'react';
+import { FC, useCallback, useState, useRef, useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import classNames from 'classnames';
+import { useLocation } from 'react-router-dom';
 // import axios from 'axios';
 
 import { Section } from '../../../../components/Section';
@@ -13,10 +14,21 @@ import { useDevice } from '../../../../hooks/useDevice';
 import './formSection.scss';
 
 export const FormSection: FC = () => {
+  const { hash } = useLocation();
   const [isFetch, setFetch] = useState<boolean>(false);
   const [isSuccess, setSuccess] = useState<boolean>(false);
   const [isError, setError] = useState<boolean>(false);
   const { isMobile } = useDevice();
+
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if(!ref?.current || hash !== '#form') return;
+
+    setTimeout(() => {
+      ref?.current?.scrollIntoView({ block: 'start' });
+    }, 100);
+  }, [ref]);
 
   const {
     control,
@@ -61,126 +73,128 @@ export const FormSection: FC = () => {
   }, []);
 
   return (
-    <Section className="about-us-section about-us-section-form">
-      <Rings className="rings rings-top" rotate={isMobile ? -25 : 0} scale={isMobile ? 0.5 : 1} />
-      <h2 className="title">Leave us a message</h2>
-      <p className="description">Our team will contact you as quickly as possible</p>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="form-wrapper">
-          <div className={classNames('form-wrapper-inner', { 'error': isValidationError })}>
-            <Controller
-              name={EFields.NAME}
-              control={control}
-              rules={{ required: 'required' }}
-              render={({ field, ...rest }) => (
-                <BaseInput
-                  field={field}
-                  errors={errors}
-                  label="Full name"
-                  name={EFields.NAME}
-                  rest={rest}
-                />
-              )}
-            />
-            <Controller
-              name={EFields.COMPANY_NAME}
-              control={control}
-              rules={{ required: 'required' }}
-              render={({ field }) => (
-                <BaseInput
-                  field={field}
-                  errors={errors}
-                  label="Company name"
-                  name={EFields.COMPANY_NAME}
-                />
-              )}
-            />
-            <Controller
-              name={EFields.EMAIL}
-              control={control}
-              rules={{ required: 'required' }}
-              render={({ field }) => (
-                <BaseInput
-                  field={field}
-                  errors={errors}
-                  label="Email"
-                  name={EFields.EMAIL}
-                />
-              )}
-            />
-            <div>
+    <div ref={ref}>
+      <Section className="about-us-section about-us-section-form">
+        <Rings className="rings rings-top" rotate={isMobile ? -25 : 0} scale={isMobile ? 0.5 : 1} />
+        <h2 className="title">Leave us a message</h2>
+        <p className="description">Our team will contact you as quickly as possible</p>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="form-wrapper">
+            <div className={classNames('form-wrapper-inner', { 'error': isValidationError })}>
               <Controller
-                name={EFields.PHONE}
+                name={EFields.NAME}
+                control={control}
+                rules={{ required: 'required' }}
+                render={({ field, ...rest }) => (
+                  <BaseInput
+                    field={field}
+                    errors={errors}
+                    label="Full name"
+                    name={EFields.NAME}
+                    rest={rest}
+                  />
+                )}
+              />
+              <Controller
+                name={EFields.COMPANY_NAME}
                 control={control}
                 rules={{ required: 'required' }}
                 render={({ field }) => (
                   <BaseInput
                     field={field}
                     errors={errors}
-                    label="Phone number"
-                    name={EFields.PHONE}
-                    type="tel"
+                    label="Company name"
+                    name={EFields.COMPANY_NAME}
                   />
                 )}
               />
               <Controller
-                name={EFields.WHATSAPP}
+                name={EFields.EMAIL}
                 control={control}
-                defaultValue={false}
+                rules={{ required: 'required' }}
                 render={({ field }) => (
                   <BaseInput
                     field={field}
                     errors={errors}
-                    name={EFields.WHATSAPP}
-                    type="checkbox"
-                    label="Text me on a WhatsApp"
-                    checked={isWhatsApp}
+                    label="Email"
+                    name={EFields.EMAIL}
                   />
                 )}
               />
+              <div>
+                <Controller
+                  name={EFields.PHONE}
+                  control={control}
+                  rules={{ required: 'required' }}
+                  render={({ field }) => (
+                    <BaseInput
+                      field={field}
+                      errors={errors}
+                      label="Phone number"
+                      name={EFields.PHONE}
+                      type="tel"
+                    />
+                  )}
+                />
+                <Controller
+                  name={EFields.WHATSAPP}
+                  control={control}
+                  defaultValue={false}
+                  render={({ field }) => (
+                    <BaseInput
+                      field={field}
+                      errors={errors}
+                      name={EFields.WHATSAPP}
+                      type="checkbox"
+                      label="Text me on a WhatsApp"
+                      checked={isWhatsApp}
+                    />
+                  )}
+                />
+              </div>
             </div>
+            <Controller
+              name={EFields.MESSAGE}
+              control={control}
+              rules={{ required: 'required' }}
+              render={({ field }) => (
+                <BaseInput
+                  field={field}
+                  errors={errors}
+                  placeholder="Write your message..."
+                  label="Message"
+                  name={EFields.MESSAGE}
+                />
+              )}
+            />
+            <Controller
+              name={EFields.AGREEMENT}
+              control={control}
+              rules={{ required: 'required' }}
+              render={({ field }) => (
+                <BaseInput
+                  field={field}
+                  errors={errors}
+                  name={EFields.AGREEMENT}
+                  type="checkbox"
+                  label="I agree to the Terms of use and Privacy Policy*"
+                  checked={isAgreement}
+                />
+              )}
+            />
+            <Button
+              text="Send message"
+              type="submit"
+              buttonType="submit"
+              className="form-wrapper-btn"
+              disabled={isFetch}
+              isSuccess={isSuccess}
+              isError={isError}
+            />
           </div>
-          <Controller
-            name={EFields.MESSAGE}
-            control={control}
-            rules={{ required: 'required' }}
-            render={({ field }) => (
-              <BaseInput
-                field={field}
-                errors={errors}
-                placeholder="Write your message..."
-                label="Message"
-                name={EFields.MESSAGE}
-              />
-            )}
-          />
-          <Controller
-            name={EFields.AGREEMENT}
-            control={control}
-            rules={{ required: 'required' }}
-            render={({ field }) => (
-              <BaseInput
-                field={field}
-                errors={errors}
-                name={EFields.AGREEMENT}
-                type="checkbox"
-                label="I agree to the Terms of use and Privacy Policy*"
-                checked={isAgreement}
-              />
-            )}
-          />
-          <Button
-            text="Send message"
-            type="submit"
-            buttonType="submit"
-            className="form-wrapper-btn"
-            disabled={isFetch}
-            isSuccess={isSuccess}
-            isError={isError}
-          />
-        </div>
-      </form>
-      <Rings className="rings rings-bottom" rotate={-90} scale={isMobile ? 0.5 : 1} />
-    </Section>
+        </form>
+        <Rings className="rings rings-bottom" rotate={-90} scale={isMobile ? 0.5 : 1} />
+      </Section>
+    </div>
   );
 }
