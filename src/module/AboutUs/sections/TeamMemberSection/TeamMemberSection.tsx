@@ -17,6 +17,7 @@ interface ITeamMemberSectionPops {
   src: string;
   message: string;
   position?: TPosition;
+  link?: string;
 }
 
 export const TeamMemberSection: FC<ITeamMemberSectionPops> = ({
@@ -25,6 +26,7 @@ export const TeamMemberSection: FC<ITeamMemberSectionPops> = ({
   src,
   message,
   position = 'left',
+  link = '#'
 }) => (
   <Section className={classNames('about-us-section about-us-section-team-member', position)}>
     <div className={classNames('wrapper', `wrapper-${position}`)}>
@@ -33,6 +35,7 @@ export const TeamMemberSection: FC<ITeamMemberSectionPops> = ({
         role={role}
         src={src}
         position={position}
+        link={link}
       />
       <div className="message-wrapper">
         <Picture src={quotes} className="img" />
