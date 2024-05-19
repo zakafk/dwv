@@ -58,6 +58,13 @@
     }
   }
 
+  .link {
+    transition: opacity 150ms;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
   .linkedin {
     width: 80px;
   }
