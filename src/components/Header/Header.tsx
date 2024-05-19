@@ -18,7 +18,7 @@ export const Header: FC = () => {
   const { pathname } = useLocation();
   // const { isDesktop } = useDevice();
 
-  const headerType = HEADER_TYPE_MAP[pathname] || EHeaderType.LIGHT;
+  const headerType = HEADER_TYPE_MAP[pathname] || EHeaderType.DARK;
 
   return (
     <header className={classNames('main-header', `main-header-${headerType}` )}>

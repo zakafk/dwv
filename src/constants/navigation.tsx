@@ -7,6 +7,8 @@ export const PATH_NAMES = {
   ABOUT_US: '/about',
   PARTNERS: '/partners',
   PROJECTS: '/projects',
+  ABOUT_COOKIE: '/about-cookie',
+  ABOUT_TERMS:'/about-terms',
 }
 
 type TNavMap = {
