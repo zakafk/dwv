@@ -18,6 +18,15 @@
     text-align: left;
   }
 
+  .link {
+    transition: opacity 150ms;
+    color: var(--color-D60);
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
   .policy {
     display: flex;
     flex-direction: column;
