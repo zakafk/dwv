@@ -9,6 +9,7 @@ export const PATH_NAMES = {
   PROJECTS: '/projects',
   ABOUT_COOKIE: '/about-cookie',
   ABOUT_TERMS:'/about-terms',
+  PRIVACY_POLICY:'/privacy-policy',
 }
 
 type TNavMap = {
