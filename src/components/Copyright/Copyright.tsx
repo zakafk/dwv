@@ -11,7 +11,7 @@ export const Copyright: FC = () => (
     <span >Copyright © 2024 </span>
     <div className="policy">
       <Link to={PATH_NAMES.ABOUT_TERMS} className="link">Terms of use</Link>
-      <span>Privacy Policy</span>
+      <Link to={PATH_NAMES.PRIVACY_POLICY}  className="link">Privacy Policy</Link>
       <Link to={PATH_NAMES.ABOUT_COOKIE} className="link">Cookie Policy</Link>
     </div>
   </Section>
