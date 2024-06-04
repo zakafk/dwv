@@ -17,7 +17,7 @@ export const ContactUsSection: FC = () => {
 
   return (
     <ul className="contacts-list">
-      <ContactUsItem src={email_src} target="_blank" href="mailto:digitalworldvisions@gmail.com" title="digitalworldvisions@gmail.com" />
+      <ContactUsItem src={email_src} target="_blank" href="mailto:info@digitalworldvisions.ae" title="info@digitalworldvisions.ae" />
       <ContactUsItem src={whatsapp_src} target="_blank" href={href} title={PHONE} />
       <ContactUsItem src={phone_src} target="_blank" href={`tel:${PHONE}`} title={PHONE} />
       <ContactUsItem src={address_marker_src} title="Building A1, Digital Park, Silicon Oasis, Dubai, UAE" />
